@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+.roboto-thin {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+  .roboto-light {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  body{
+    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content:center ;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  .container{
+    background-color: #fff;
+    width: 350px;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 0 10px gray;
+  }
+
+  form{
+    display: flex;
+    flex-direction: column;
+    
+  }
+
+  input{
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 5px;
+    margin-bottom: 6px;
+    outline: 0;
+    
+  }
+
+  /*  personnalisons le bouton d'envoi */
+  input[type="submit"]{
+    background-color: #675afe;
+    color: white;
+    border: 1px solid  #675afe;
+    cursor: pointer;
+  }
+
+  #message{
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 6px;
+    width: 350px;
+    position: relative;
+    padding: 20px;
+    margin-top: 10px;
+    letter-spacing: 0.5px;
+    animation: anime 0.5s ease-out;
+  }
+  
+  /* Animation message */
+  @keyframes anime{
+    from{
+        transform: translateY(100px);
+    }
+  }
+
+  h3{
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  #message p {
+    margin-left: 7px;
+    padding: 7px 0;
+    font-size: 15px;
+  }
+
+  /*  lorsqué les exigences sont erronnées */
+  .invalid{
+    color: red;
+  }
+
+  .invalid:before{
+    position: relative;
+    left: -7px;
+    content: "✕";
+  }
+
+  .valid{
+    color: green;
+
+  }
+  .valid:before{
+    position: relative;
+    left: -7px;
+    content: "✓";
+
+  }
+
+/* Style de l'icône de révélation personnalisée */
